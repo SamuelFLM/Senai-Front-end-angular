@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "gamemania": {
+    "loja-games": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/gamemania",
+            "outputPath": "dist/loja-games",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -25,10 +25,12 @@
               "src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/purple-green.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.js"
             ]
           },
           "configurations": {
@@ -62,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "gamemania:build:production"
+              "browserTarget": "loja-games:build:production"
             },
             "development": {
-              "browserTarget": "gamemania:build:development"
+              "browserTarget": "loja-games:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -73,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "gamemania:build"
+            "browserTarget": "loja-games:build"
           }
         },
         "test": {
@@ -89,7 +91,7 @@
               "src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/purple-green.css",
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -99,6 +101,6 @@
     }
   },
   "cli": {
-    "analytics": "b3b40d5e-8a53-4ab4-a1bc-b83b6af81c65"
+    "analytics": "e92d38b4-c065-42c2-b634-53428b194d6c"
   }
 }
